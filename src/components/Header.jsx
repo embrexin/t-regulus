@@ -7,7 +7,7 @@ function Header({ isScrolled }) {
   return (
     <header className={`header ${isScrolled ? 'scrolled' : ''}`}>
       <div className="logo">
-        <img src={Logo} alt="T-Regulus Logo" />
+        <a href="#"><img src={Logo} alt="T-Regulus Logo" /></a>
       </div>
       <nav>
         <ul>

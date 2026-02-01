@@ -13,6 +13,10 @@ body, html {
   padding-bottom: 50%;
 }
 
+a {
+  cursor: pointer;
+}
+
 .App {
   position: relative;
 }
@@ -25,7 +29,7 @@ body, html {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 20px 50px;
+  padding: 10px 50px;
   background: transparent;
   z-index: 100;
   box-sizing: border-box;
@@ -37,7 +41,7 @@ body, html {
 }
 
 .logo img {
-  height: 50px;
+  height: 70px;
 }
 
 .header nav ul {
@@ -62,7 +66,7 @@ body, html {
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  padding-left: 50px;
+  padding-left: 20vh;
 }
 
 .hero-content {
@@ -85,7 +89,7 @@ body, html {
   background-color: #00417E;
   color: white;
   border: none;
-  padding: 10px 30px;
+  padding: 10px 40px;
   border-radius: 50px;
   font-size: 1em;
   margin-top: 10%;
