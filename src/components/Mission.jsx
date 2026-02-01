@@ -1,4 +1,5 @@
 import React from 'react';
+import arrowRightIcon from '../../assets/arrow-right.svg';
 
 function Mission() {
   return (
@@ -16,6 +17,10 @@ function Mission() {
             eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia 
             deserunt mollit anim id est laborum.
           </p>
+          <a href="#" className="learn-more-link">
+            Learn more about T-Regulus 
+            <img src={arrowRightIcon} alt="arrow right" />
+          </a>
         </div>
       </div>
     </section>
