@@ -1,12 +1,119 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap');
 
-body {
+body, html {
+  font-family: "Nunito Sans", sans-serif;
+  margin: 0;
+  padding: 0;
+  color: #00417E;
+  scroll-behavior: smooth;
+}
+
+.App {
+  position: relative;
+}
+
+.header {
+  position: absolute; /* Changed from sticky to absolute */
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 50px;
+  background: transparent;
+  z-index: 100;
+  box-sizing: border-box;
+  transition: background-color 0.3s ease;
+}
+
+.header.scrolled {
+  position: fixed; 
+  background-color: rgba(255, 255, 255, 0.2);
+  width: 100%;
+}
+
+.logo img {
+  height: 50px;
+}
+
+.header nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+.header nav ul li {
+  padding: 0 20px;
+}
+
+.header nav ul li a {
+  text-decoration: none;
+  color: #00417E;
+  font-weight: 400;
+}
+
+.hero {
+  height: 100vh;
   background-image: url('/assets/background0.jpg');
   background-size: cover;
   background-position: center;
-  background-repeat: no-repeat;
-  font-family: 'Nunito Sans', sans-serif;
-  color: #00417E;
+  display: flex;
+  justify-content: flex-start; /* Align content to the start (left) */
+  align-items: center;
+  padding-left: 50px; /* Add some padding from the left edge */
+  padding-top: 90px; /* Add padding to account for the absolute header height */
 }
+
+.hero-content {
+  text-align: left; /* Align text within hero-content to the left */
+  color: #00417E; /* Set the main color for hero text */
+  max-width: 50%; /* Limit width to keep it on the left */
+}
+
+.hero-title {
+  font-size: 4em; /* Large text */
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.hero-slogan {
+  font-size: 1.5em; /* Smaller text */
+}
+
+.about-us-button {
+  background-color: #00417E;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 50px;
+  font-size: 1em;
+  margin-top: 20px;
+  cursor: pointer;
+}
+
+.mission-section {
+  padding: 50px;
+  background-color: #f8f9fa; /* A light background for the section */
+}
+
+.mission-content {
+  display: flex;
+  align-items: flex-start;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.mission-title {
+  flex: 0 0 30%; /* Title takes up 30% of the width */
+  font-size: 2em;
+  font-weight: bold;
+}
+
+.mission-text {
+  flex: 1; /* Text takes up the remaining space */
+  font-size: 1.1em;
+  line-height: 1.6;
+}
+
