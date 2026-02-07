@@ -5,7 +5,7 @@ function Mission() {
   return (
     <section id="mission" className="mission-section">
       <div className="mission-content">
-        <div className="mission-title">
+        <div className="section-title mission-title">
           <h2>Our Mission</h2>
         </div>
         <div className="mission-text">

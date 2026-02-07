@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import Header from './components/Header';
 import Hero from './components/Hero';
 import Mission from './components/Mission';
+import About from './components/About';
 
 function App() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -28,6 +29,7 @@ function App() {
       <Header isScrolled={isScrolled} />
       <Hero />
       <Mission />
+      <About />
     </div>
   );
 }
