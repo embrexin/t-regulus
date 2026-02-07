@@ -3,7 +3,7 @@ import cell2 from '../../assets/cell2.jpg';
 
 function About() {
   return (
-    <section id="about" className="about-section">
+    <section id="als" className="about-section">
       <div className="about-content">
         <div className="section-title about-title">
           <h2>About ALS</h2>
