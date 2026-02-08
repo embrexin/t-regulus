@@ -155,7 +155,8 @@ a {
 
 .about-boxes {
   display: flex;
-  gap: 20px;
+  gap: 50px;
+  margin-top: 10vh;
 }
 
 .about-left {
@@ -193,6 +194,69 @@ a {
   padding: 20px;
   border-radius: 15px;
   flex: 2;
+  flex-direction: column;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.about2-left {
+  flex: 2;
+}
+
+.about2-right {
+  flex: 3;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.about2-left img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 15px;
+}
+
+.about2-box {
+  display: flex;
+  flex-direction: row;
+}
+
+.about2-box-spacer {
+  flex: 1;
+}
+
+.about2-box-text1 {
+  background-color: rgba(0, 108, 208, 0.1);
+  color: #00417E;
+  padding: 20px;
+  border-radius: 15px;
+  flex: 5;
+  flex-direction: column;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.about2-box-text2 {
+  background-color: rgba(0, 96, 186, 0.6);
+  color: white;
+  padding: 20px;
+  border-radius: 15px;
+  flex: 5;
+  flex-direction: column;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.about2-box-text3 {
+  background-color: #245B90;
+  color: white;
+  padding: 20px;
+  border-radius: 15px;
+  flex: 5;
   flex-direction: column;
   display: flex;
   justify-content: center;
