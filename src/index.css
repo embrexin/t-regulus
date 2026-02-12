@@ -10,7 +10,7 @@ body, html {
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
-  padding-bottom: 50%;
+  padding-bottom: 20%;
 }
 
 a {
@@ -62,7 +62,6 @@ a {
   font-weight: 400;
 }
 
-/* General styles for hamburger menu - hidden by default */
 .hamburger-menu {
   display: none;
   flex-direction: column;
@@ -70,7 +69,8 @@ a {
   width: 30px;
   height: 25px;
   cursor: pointer;
-  z-index: 110; /* Above regular header */
+  margin-left: auto;
+  z-index: 110;
 }
 
 .hamburger-menu .bar {
@@ -282,9 +282,8 @@ a {
 }
 
 @media (max-width: 768px) {
-  /* General mobile adjustments */
   body, html {
-    font-size: 14px; /* Base font size adjustment for mobile */
+    font-size: 14px;
   }
 
   .header {
@@ -295,32 +294,48 @@ a {
     height: 50px;
   }
 
-  .header nav ul {
-    display: none; /* Hide desktop menu on mobile */
+  /* SHOW HAMBURGER */
+  .hamburger-menu {
+    display: flex;
   }
 
-  .hamburger-menu {
-    display: flex; /* Show hamburger menu on mobile */
+  .header nav ul {
+    position: fixed;
+    top: 70px;
+    left: 50%;
+    width: 80%;
+    max-width: 320px;
+    background-color: rgba(255, 255, 255, 0.95);
+    padding: 10px 0;
+    z-index: 90;
+
+    display: flex;
+    flex-direction: column;
+
+    opacity: 0;
+    transform: translateX(-50%) translateY(-12px);
+    pointer-events: none;
+
+    transition:
+      opacity 0.25s ease,
+      transform 0.25s ease;
   }
 
   .header nav ul.mobile-open {
-    display: flex; /* Show mobile menu when active */
-    flex-direction: column;
-    position: absolute;
-    left: 0;
-    top: 70px; /* Below the header */
-    width: 80%;
-    background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent background */
-    padding: 10px 0;
-    z-index: 90; /* Below header content but above other page content */
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+    pointer-events: auto;
   }
 
-  .header nav ul.mobile-open li {
-    padding: 20px 20px;
+  .header nav ul li {
+    padding: 20px;
     text-align: center;
+    opacity: 1;
+    transform: none;
+    transition: none;
   }
-  
-  .header nav ul.mobile-open li a {
+
+  .header nav ul li a {
     color: #00417E;
     font-size: 1.1em;
     font-weight: 600;
@@ -364,18 +379,17 @@ a {
     font-size: 1.2em;
   }
 
-  /* About section specific adjustments */
   .about-section {
     padding: 30px;
   }
 
   .about-section p {
-    font-size: 1.1em; /* Smaller font size for mobile */
+    font-size: 1.1em;
   }
 
   .about-boxes {
     flex-direction: column;
-    gap: 30px; /* Adjust gap for vertical stacking */
+    gap: 30px;
     margin-top: 5vh;
   }
 
@@ -383,22 +397,22 @@ a {
   .about-right,
   .about2-left,
   .about2-right {
-    flex: none; /* Remove flex sizing */
-    width: 100%; /* Take full width */
+    flex: none;
+    width: 100%;
   }
 
   .about-right img,
   .about2-left img {
-    height: auto; /* Ensure images scale correctly */
+    height: auto; 
   }
 
   .about2-box {
     flex-direction: column;
-    gap: 15px; /* Adjust gap between text boxes */
+    gap: 15px;
   }
 
   .about2-box-spacer {
-    display: none; /* Hide spacer on mobile */
+    display: none;
   }
 
   .about2-box-text1,
